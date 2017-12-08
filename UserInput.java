@@ -3,6 +3,7 @@
 //
 /*
  This code is a practice Java interview question from testdome.com
+ https://www.testdome.com/questions/java/user-input/11995?visibility=1&skillId=4
  
  Problem statement: User interface contains two types of user input controls: TextInput, which accepts all characters and NumericInput, which accepts only digits.
 	-Implement the class TextInput that contains:
