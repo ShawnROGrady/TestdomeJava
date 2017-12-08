@@ -7,6 +7,8 @@
  
  Problem statement: Write a function that checks if a given binary search tree contains a given value.
  	-Binary search tree (BST) is a binary tree where the value of each node is larger or equal to the values in all the nodes in that node's left subtree and is smaller than the values in all the nodes in that node's right subtree.
+ 
+ +Passes 3/3 test cases
  */
 package BinarySearchTree;
 
@@ -29,11 +31,21 @@ public class BinarySearchTree {
         }
         else if(root.value<value){
         	//value we are searching for is greater than that held by node we are at
-        	return contains(root.right, value);
+        		if(root.right!=null){
+        			return contains(root.right, value);
+        		}
+        		else{
+        			return false;
+        		}
         }
         else{
         	//value we are searching for is greater than that held by node we are at
-        	return contains(root.left, value);
+        	if(root.left!=null){
+        		return contains(root.left, value);
+        	}else{
+        		return false;
+        	}
+        	
         }
     }
     
