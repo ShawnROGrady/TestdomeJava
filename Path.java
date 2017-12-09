@@ -16,8 +16,6 @@ https://www.testdome.com/questions/java/path/12283?visibility=1&skillId=4
        -do not use built-in path-related functions
  
  */
-package path;
-
 public class Path {
     private String path;
 
@@ -30,12 +28,18 @@ public class Path {
     }
 
     public void cd(String newPath) {
-        throw new UnsupportedOperationException("Waiting to be implemented.");
+        //int i=0;
+        String[] newPathArray=newPath.split("/");
+        int newPathLength=newPathArray.length;
+        for(int i=0; i< newPathLength; i++){
+        	System.out.println(newPathArray[i]);
+        }
+        
     }
 
     public static void main(String[] args) {
         Path path = new Path("/a/b/c/d");
-        path.cd("../x");
+        path.cd("/y/../x");
         System.out.println(path.getPath());
     }
 }
