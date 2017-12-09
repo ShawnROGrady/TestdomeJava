@@ -16,6 +16,10 @@ https://www.testdome.com/questions/java/path/12283?visibility=1&skillId=4
        -do not use built-in path-related functions
  
  */
+package path;
+
+import java.util.ArrayList;
+
 public class Path {
     private String path;
 
@@ -29,11 +33,21 @@ public class Path {
 
     public void cd(String newPath) {
         //int i=0;
-        String[] newPathArray=newPath.split("/");
-        int newPathLength=newPathArray.length;
-        for(int i=0; i< newPathLength; i++){
-        	System.out.println(newPathArray[i]);
+        String[] newPathArray=newPath.split("/"); 
+        String[] pathArray=this.path.split("/");
+        
+        ArrayList pathList=new ArrayList(); //this cannot be an array, since it needs to have variable size
+        for(int j=1; j<pathArray.length; j++){
+        	pathList.add(pathArray[j]);
         }
+        int newPathLength=newPathArray.length;
+        System.out.println(pathList);
+        /*
+        if(newPathArray[0]==""){
+        	//absolute pathname
+        	
+        }*/
+        
         
     }
 
