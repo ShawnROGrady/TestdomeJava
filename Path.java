@@ -32,28 +32,43 @@ public class Path {
     }
 
     public void cd(String newPath) {
-        //int i=0;
+        int i=0;
         String[] newPathArray=newPath.split("/"); 
         String[] pathArray=this.path.split("/");
+        int newPathLength=newPathArray.length;
         
         ArrayList pathList=new ArrayList(); //this cannot be an array, since it needs to have variable size
         for(int j=1; j<pathArray.length; j++){
         	pathList.add(pathArray[j]);
         }
-        int newPathLength=newPathArray.length;
-        System.out.println(pathList);
-        /*
-        if(newPathArray[0]==""){
-        	//absolute pathname
-        	
-        }*/
         
+        if(newPathArray[0].equals("")){
+        	//absolute pathname
+        	pathList.clear();
+        	pathList.add(newPathArray[1]);
+        	System.out.println("hello");
+        	i=i+2;
+        }
+        
+        while(i<newPathLength){
+        	int k=pathList.size()-1;
+        	if(newPathArray[i].equals("..")){
+        		//parent directory
+        		pathList.remove(k);
+        	}
+        	else{
+        		//adding a child directory
+        		pathList.add(newPathArray[i]);
+        	}
+        	i++;
+        }
+        System.out.println(pathList);
         
     }
 
     public static void main(String[] args) {
         Path path = new Path("/a/b/c/d");
-        path.cd("/y/../x");
+        path.cd("x/../z");
         System.out.println(path.getPath());
     }
 }
