@@ -15,10 +15,12 @@ https://www.testdome.com/questions/java/path/12283?visibility=1&skillId=4
        -the function will not be passed any invalid paths
        -do not use built-in path-related functions
  
+ + Passes 4/4 tests
  */
 package path;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Path {
     private String path;
@@ -46,7 +48,6 @@ public class Path {
         	//absolute pathname
         	pathList.clear();
         	pathList.add(newPathArray[1]);
-        	System.out.println("hello");
         	i=i+2;
         }
         
@@ -62,7 +63,15 @@ public class Path {
         	}
         	i++;
         }
-        System.out.println(pathList);
+       
+        StringBuilder updatedPath=new StringBuilder();
+        for(int l=0; l<pathList.size(); l++){
+        	updatedPath.append("/"+pathList.get(l));
+        }
+        
+        //System.out.println(updatedPath);
+        this.path=updatedPath.toString();
+        
         
     }
 
