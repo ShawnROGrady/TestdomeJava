@@ -17,7 +17,7 @@ https://www.testdome.com/questions/java/path/12283?visibility=1&skillId=4
  
  + Passes 4/4 tests
  */
-package path;
+package by.naxa.testdome;
 
 import java.util.ArrayList;
 

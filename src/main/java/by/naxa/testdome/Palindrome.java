@@ -8,7 +8,7 @@
  
  +Passes 3/3 tests
  */
-package Palindrome;
+package by.naxa.testdome;
 
 public class Palindrome {
     public static boolean isPalindrome(String word) {

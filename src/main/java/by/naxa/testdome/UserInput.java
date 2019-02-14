@@ -15,7 +15,7 @@
 
 + Passes 4/4 tests
  */
-package userInput;
+package by.naxa.testdome;
 
 public class UserInput {
 	private static String value;	//current value

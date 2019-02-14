@@ -15,7 +15,7 @@
  +Passes 3/3 tests
  */
 
-package TrainComposition;
+package by.naxa.testdome;
 
 class TrainNode{
 	int value;
