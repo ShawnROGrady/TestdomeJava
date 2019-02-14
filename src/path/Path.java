@@ -20,7 +20,6 @@ https://www.testdome.com/questions/java/path/12283?visibility=1&skillId=4
 package path;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Path {
     private String path;
