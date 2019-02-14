@@ -10,7 +10,7 @@
  
  +Passes 3/3 test cases
  */
-package BinarySearchTree;
+package by.naxa.testdome;
 
 class Node {
 	//starting code left these public, which makes code a bit simpler

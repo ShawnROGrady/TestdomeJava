@@ -11,7 +11,7 @@
  +passes 3/4 tests
  	-code takes too long to answer when array has large # of elements
  */
-package TwoSum;
+package by.naxa.testdome;
 
 public class TwoSum {
     public static int[] findTwoSum(int[] list, int sum) {
